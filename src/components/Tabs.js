@@ -12,75 +12,70 @@ import Add from '../screens/Add';
 
 const Tab = createBottomTabNavigator();
 const Tabs = () => {
-  const customTabBarStyle = {
-    activeTintColor: '#0091EA',
-    inactiveTintColor: 'gray',
-    style: {backgroundColor: 'white' },
-}
+ 
   return (
 
     <Tab.Navigator
-    
-      screenOptions={{
-        showLabel: false,
-        style: {
-          position: 'absolute',
-          bottom: 25,
-          left: 20,
-          right: 20,
-
-        },
+      initialRouteName="Folder"
+      tabBarOptions={{
+        activeTintColor: '#42f44b',
       }}>
       <Tab.Screen
         name="Folder"
         component={Folder}
         options={{
-          tabBarIconStyle: ({ focussed }) => (
-            <View
+          tabBarLabel: '',
+          tabBarIcon: ({ focused, color, size }) => (
+            <Image
+              source={IMAGES.degree}
               style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                top: 10,
-              }}>
-              <Image
-
-                source={IMAGES.degree}
-                resizeMode='contain'
-                style={{ width: 25, height: 25, tintColor: focussed ? '#e32f45' : '#748c94' }}
-              />
-              <Text style={{ color: focussed ? '#e32f45' : '#748c94' }}>Folder</Text>
-            </View>
+                width: size,
+                height: size,
+                borderRadius: size,
+              }}
+            />
           ),
         }}
       />
       <Tab.Screen
-        name="Add"
+        name="Plus"
         component={Add}
         options={{
-          tabBarIconStyle: ({ focussed }) => (
-            <View
+          tabBarLabel: '',
+          tabBarIcon: ({ focused, size }) => (
+            <Image
+              source={IMAGES.plus}
               style={{
                 position: 'absolute',
-                bottom: 0, // space from bottombar
+                bottom: 0,
                 height: 68,
                 width: 68,
-                borderRadius: 68,
+                borderRadius: 70,
                 justifyContent: 'center',
                 alignItems: 'center',
-              }}>
-              <Image
-
-                source={IMAGES.plus}
-                resizeMode='contain'
-                style={{ width: 25, height: 25, tintColor: focussed ? '#e32f45' : '#748c94' }}
-              />
-              <Text style={{ color: focussed ? '#e32f45' : '#748c94' }}>Folder</Text>
-            </View>
+              }}
+            />
           ),
         }}
       />
-      <Tab.Screen name="Setting" component={Setting} />
-
+      <Tab.Screen
+        name="Setting"
+        style={{screenLeft:10}}
+        component={Setting}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({ focused, color, size }) => (
+            <Image
+              source={IMAGES.setting}
+              style={{
+                width: size,
+                height: size,
+                borderRadius: size,
+              }}
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
 
   );

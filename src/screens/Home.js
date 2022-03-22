@@ -49,18 +49,11 @@ const Home = () => {
             onChangeText={onChangeSearch}
             style={styles.searchStyle}
             value={searchq}
-            icon={<Ionicons
-              name="search"
-              size={25}
-              style={{right: 12, marginStart: 20}}
-            />}
-          />
-              {/* <Ionicons
-                  name="search"
-                  size={25}
-                  style={{right: 12, marginStart: 20}}
-                />           */}
-                <View style={{ flexDirection: 'row' }}>
+         
+          >
+          </Searchbar>
+     
+          <View style={{ flexDirection: 'row' }}>
             <View style={{ flexDirection: 'column', flex: 1, bottom: 20, right: 28 }}>
               <Image
                 style={styles.singleImageStyle}
@@ -146,11 +139,8 @@ const Home = () => {
                 </Text>
 
               </View>
-
             </View>
           </ScrollView>
-
-
           <Tabs />
 
         </LinearGradient>
@@ -199,7 +189,7 @@ const styles = StyleSheet.create({
     top: 5,
     left: 30,
     borderRadius: 20,
-    width: width / 1.20,
+    width: width / 1.22,
     height: height / 17,
   },
   scanStyle: {

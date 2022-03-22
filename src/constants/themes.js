@@ -2,15 +2,13 @@ import { StyleSheet } from 'react-native';
 
 export const COLORS = {
     black: 'black',
+    grey:'grey'
 
 }
 export const FONTS = {
 
     appFontSemiBold: { fontFamily: 'Poppins-SemiBold.ttf', fontSize: 16, },
     appFontBold: { fontFamily: 'Poppins-SemiBold.ttf', fontSize: 22, },
-
-
-
 }
 const Frameone = require("../../assets/images/Frameone.jpg")
 const Frametwo = require("../../assets/images/Frametwo.png")
@@ -26,7 +24,9 @@ const logo = require("../../assets/images/Image.jpeg")
 const setting = require("../../assets/images/setting.png")
 const degree = require("../../assets/images/degree.png")
 const folders = require("../../assets/images/folders.png")
-const plus = require("../../assets/images/plus.png")
+const plus = require("../../assets/images/plusIcon.png")
+const search = require("../../assets/images/search.png")
+
 
 
 export const IMAGES = {
@@ -44,7 +44,8 @@ export const IMAGES = {
     setting,
     degree,
     folders,
-    plus
+    plus,
+    search
 }
 export const GLOBALSTYLES = StyleSheet.create({
 })
